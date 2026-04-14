@@ -85,7 +85,7 @@ def longest_rising_streak(monitor):
     Retorna la longitud maxima de una secuencia de lecturas consecutivas
     donde las temperaturas aumentan estrictamente.
     """
-    # TODO: Implementar
+    
     pass
 
 
