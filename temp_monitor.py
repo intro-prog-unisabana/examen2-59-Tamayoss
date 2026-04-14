@@ -69,7 +69,10 @@ def coldest_window(monitor, k):
     lecturas = monitor['readings']
     tempbaj = None
     for i in range(len(lecturas) - k + 1):
-        ventana = sum(lecturas) 
+        ventana = (sum(lecturas[i:i+k]))/k
+        if tempbaj is None or ventana < tempbaj:
+            tempbaj = ventana
+        
     
     return tempbaj
 
