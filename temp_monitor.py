@@ -20,8 +20,8 @@ def add_reading(monitor, temp):
     Agrega una nueva lectura con la temperatura especificada.
     Retorna el diccionario modificado.
     """
-    monitor ["reading"].append(temp)
-    monitor ["total"] = temp
+    monitor ["readings"].append(temp)
+    monitor ["total"] += temp
     return monitor
     
     
@@ -41,7 +41,7 @@ def average_temp(monitor):
     """
     Retorna la temperatura promedio de todas las lecturas.
     """
-    return monitor["total"]/12
+    return monitor["total"]/count(monitor)
     pass
 
 
@@ -50,7 +50,7 @@ def format_readings(monitor):
     Retorna una representacion en cadena de las temperaturas.
     Formato: [t1, t2, t3, ..., tn]
     """
-    return [range(add_reading)]
+    return (monitor["readings"])
     pass
 
 
@@ -58,7 +58,7 @@ def highest_temp(monitor):
     """
     Retorna la temperatura mas alta de cualquier lectura.
     """
-    # TODO: Implementar
+    return max(monitor["readings"])
     pass
 
 
@@ -66,7 +66,14 @@ def coldest_window(monitor, k):
     """
     Retorna el promedio mas bajo de cualquier k lecturas consecutivas.
     """
-    # TODO: Implementar
+    lecturas = monitor['readings']
+    tempbaj = None
+    for i in range(len(lecturas) - k + 1):
+        ventana = sum(lecturas) 
+    
+    return tempbaj
+
+    return 
     pass
 
 
